@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRIME Admin 3 — Formatting &amp; Components</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,400..700&family=Inter:wght@500&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="topbar" style="position:sticky;top:0;z-index:40">
+    <div style="font-weight:500;font-size:15px;letter-spacing:.06em;text-transform:uppercase">PRIME <span style="color:var(--pa-primary)">ADMIN 3</span> · Pattern Library</div>
+    <div style="flex:1"></div>
+    <span class="pa-caption">Source: Activity Details (23WC255)</span>
+  </header>
+
+  <div class="page__head">
+    <h1 class="pa-page-title">FORMATTING &amp; COMPONENTS</h1>
+    <div class="pa-meta" style="margin-top:12px">
+      <span><span class="pa-meta-key">Baseline</span> <span class="pa-meta-val">Activity Details redesign</span></span>
+      <span><span class="pa-meta-key">Library</span> <span class="pa-meta-val">PrimeAdmin 3</span></span>
+      <span><span class="pa-meta-key">Version</span> <span class="pa-meta-val">1.0</span></span>
+      <span><span class="pa-meta-key">Status</span> <span class="pa-meta-val" style="color:var(--pa-success)">For implementation</span></span>
+    </div>
+    <p class="page__intro">The framework — sidebar, header, tab bar — matches the PrimeAdmin 3 UI kit. What follows are the formatting decisions layered on top of it in the Activity Details work, written as rules so they can be applied to the pages already built.</p>
+  </div>
+
+  <div class="pa-tabs" id="tabs" style="margin:12px 0 0;position:sticky;top:56px;z-index:30">
+    <button class="pa-tabs__btn pa-tabs__btn--active" data-tab="foundations">FOUNDATIONS</button>
+    <button class="pa-tabs__btn" data-tab="components">COMPONENTS</button>
+    <button class="pa-tabs__btn" data-tab="patterns">PATTERNS</button>
+  </div>
+
+  <div class="page__body">
+
+  <!-- ================= FOUNDATIONS ================= -->
+  <div class="stack" data-panel="foundations">
+
+    <section class="pa-card">
+      <div class="pa-band">COLOR</div>
+      <div class="pa-card__body">
+        <div class="pa-spec-name" style="margin-bottom:12px">Interactive blues — every clickable surface</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px">
+          <div><div style="height:56px;border-radius:4px;background:var(--pa-primary)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Primary</div><div class="pa-mono">--pa-primary · #1976D2</div><div class="pa-caption" style="font-size:11.5px;line-height:16px;margin-top:3px">Buttons, links, tab bar, page title</div></div>
+          <div><div style="height:56px;border-radius:4px;background:var(--pa-primary-700)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Primary 700</div><div class="pa-mono">--pa-primary-700 · #1147A1</div><div class="pa-caption" style="font-size:11.5px;line-height:16px;margin-top:3px">Active tab, pressed, link hover</div></div>
+          <div><div style="height:56px;border-radius:4px;background:var(--pa-primary-050)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Primary 050</div><div class="pa-mono">--pa-primary-050 · #EEF5FC</div><div class="pa-caption" style="font-size:11.5px;line-height:16px;margin-top:3px">Inline sub-panels, row hover</div></div>
+          <div><div style="height:56px;border-radius:4px;background:var(--pa-aqua-500)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Aqua 500</div><div class="pa-mono">--pa-aqua-500 · #00ADEE</div><div class="pa-caption" style="font-size:11.5px;line-height:16px;margin-top:3px">External-link buttons in the rail only</div></div>
+        </div>
+
+        <div style="height:1px;background:var(--pa-line);margin:26px 0 22px"></div>
+        <div class="pa-spec-name" style="margin-bottom:12px">Surfaces &amp; ink</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px">
+          <div><div style="height:44px;border-radius:4px;background:#fff;border:1px solid var(--pa-divider)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Canvas / card</div><div class="pa-mono">#FFFFFF</div></div>
+          <div><div style="height:44px;border-radius:4px;background:#f0f0f0"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Section band</div><div class="pa-mono">#F0F0F0</div></div>
+          <div><div style="height:44px;border-radius:4px;background:var(--pa-sidebar-bg)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Sidebar</div><div class="pa-mono">--pa-sidebar-bg · #202020</div></div>
+          <div><div style="height:44px;border-radius:4px;background:var(--pa-ink)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Ink</div><div class="pa-mono">--pa-ink · #212121</div></div>
+          <div><div style="height:44px;border-radius:4px;background:var(--pa-ink-3)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Label ink</div><div class="pa-mono">--pa-ink-3 · #666666</div></div>
+          <div><div style="height:44px;border-radius:4px;background:var(--pa-ink-7)"></div><div class="pa-spec-name" style="margin-top:7px;font-size:12px">Field underline</div><div class="pa-mono">--pa-ink-7 · #9E9E9E</div></div>
+        </div>
+
+        <div style="height:1px;background:var(--pa-line);margin:26px 0 22px"></div>
+        <div class="pa-spec-name" style="margin-bottom:12px">Semantic — status text, toasts, validation only</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <span style="display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:4px;background:var(--pa-success-bg);color:var(--pa-success);font-size:12.5px;font-weight:500"><i class="mdi mdi-check-circle-outline"></i>Success · #2E7D32</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:4px;background:var(--pa-warning-bg);color:var(--pa-warning);font-size:12.5px;font-weight:500"><i class="mdi mdi-alert-outline"></i>Warning · #E98F28</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:4px;background:var(--pa-error-bg);color:var(--pa-error);font-size:12.5px;font-weight:500"><i class="mdi mdi-close-circle-outline"></i>Error · #D32F2F</span>
+        </div>
+        <div class="pa-callout js-rules" style="margin-top:22px">
+          <div class="pa-callout__title">Rules</div>
+          <ul>
+            <li>One accent per action class: blue for anything that changes data, aqua only for links that leave the page.</li>
+            <li>Status values are colored text, never filled badges, in the page header meta strip.</li>
+            <li>No gradients, no tinted page backgrounds. Grey #F0F0F0 bands are the only non-white surface in content.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">TYPE SCALE</div>
+      <div style="padding:6px 32px 28px">
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Page title</div><div class="pa-spec-desc">Roboto Regular 26 / 34, +1.3px, all caps, primary blue. One per page.</div><div class="pa-mono" style="margin-top:6px">.pa-page-title</div></div>
+          <div style="align-self:center"><h1 class="pa-page-title">ACTIVITIES</h1></div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Screen heading</div><div class="pa-spec-desc">Roboto Regular 22, +0.5px, all caps, ink. Names the record and carries its code in parentheses.</div><div class="pa-mono" style="margin-top:6px">.pa-screen-title</div></div>
+          <div style="align-self:center">
+            <div class="pa-caption" style="font-size:13px;margin-bottom:8px">23258 &gt; 23WC255</div>
+            <h2 class="pa-screen-title">ACTIVITY DETAILS (23WC255)</h2>
+          </div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Card section band</div><div class="pa-spec-desc">Roboto 18, +0.3px, all caps on #F0F0F0, 13px / 32px padding. Divides one card into labelled groups.</div><div class="pa-mono" style="margin-top:6px">.pa-band</div></div>
+          <div><div style="border:1px solid var(--pa-divider);border-radius:4px;overflow:hidden"><div class="pa-band">IMPORTANT DATES</div><div style="height:46px;background:#fff"></div></div></div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Rail heading</div><div class="pa-spec-desc">Roboto Regular 19, +0.4px, all caps, ink. Groups the right-hand utility stacks. 28px above, 14px below.</div><div class="pa-mono" style="margin-top:6px">.pa-rail-title</div></div>
+          <div style="align-self:center"><h3 class="pa-rail-title">USEFUL LINKS</h3></div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Field label / value</div><div class="pa-spec-desc">Floating label: Roboto 13 ink-6 on the baseline when empty, scaling to 11.5 and rising 24px once focused or filled — blue while focused. Value Roboto Flex 13.5 in ink.</div><div class="pa-mono" style="margin-top:6px">.pa-field__label</div></div>
+          <div style="max-width:360px"><div class="pa-field"><label class="pa-field__label">Activity Title</label><div class="pa-field__input" style="border-bottom:1px solid var(--pa-ink-7)">Updates in Refractory Chronic Cough</div></div></div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Helper &amp; meta</div><div class="pa-spec-desc">Helper text Roboto 12 / 18 ink-3, sits under the field it explains. Meta keys 12px all caps ink-3, values 13px 500 ink.</div></div>
+          <div style="align-self:center;display:flex;flex-direction:column;gap:10px">
+            <div class="pa-caption" style="max-width:520px">Part of the URL where users join. Use a simple, lowercase word such as "patient" or "provider".</div>
+            <div class="pa-meta" style="gap:6px 30px"><span><span class="pa-meta-key">Activity Type</span> <span class="pa-meta-val">Webinar</span></span><span><span class="pa-meta-key">Status</span> <span class="pa-meta-val" style="color:var(--pa-warning)">Submitted to PARS</span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">SURFACE, SPACING &amp; MOTION</div>
+      <div class="pa-card__body" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px 40px">
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Elevation</div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="background:#fff;border:1px solid var(--pa-divider);border-radius:4px;box-shadow:var(--pa-elev-1);padding:12px 14px;font-size:12.5px">Rail cards, tables — <span class="pa-mono">--pa-elev-1</span></div>
+            <div style="background:#fff;border:1px solid var(--pa-divider);border-radius:4px;box-shadow:var(--pa-elev-card);padding:12px 14px;font-size:12.5px">Form cards — softened <span class="pa-mono">--pa-elev-card</span></div>
+            <div style="background:#fff;border-radius:8px;box-shadow:var(--pa-elev-modal);padding:12px 14px;font-size:12.5px">Modals &amp; drawers — <span class="pa-mono">--pa-elev-modal</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Radii</div>
+          <div style="display:flex;gap:14px;flex-wrap:wrap">
+            <div style="text-align:center"><div style="width:64px;height:52px;background:var(--pa-primary-050);border:1px solid var(--pa-divider);border-radius:2px"></div><div class="pa-caption" style="font-size:11.5px;margin-top:6px">2 · cells</div></div>
+            <div style="text-align:center"><div style="width:64px;height:52px;background:var(--pa-primary-050);border:1px solid var(--pa-divider);border-radius:4px"></div><div class="pa-caption" style="font-size:11.5px;margin-top:6px">4 · cards, buttons, fields</div></div>
+            <div style="text-align:center"><div style="width:64px;height:52px;background:var(--pa-primary-050);border:1px solid var(--pa-divider);border-radius:8px"></div><div class="pa-caption" style="font-size:11.5px;margin-top:6px">8 · modals</div></div>
+            <div style="text-align:center"><div style="width:64px;height:52px;background:var(--pa-primary-050);border:1px solid var(--pa-divider);border-radius:16px"></div><div class="pa-caption" style="font-size:11.5px;margin-top:6px">16 · chips</div></div>
+          </div>
+          <div class="pa-caption" style="margin-top:12px;max-width:420px">Buttons are squared to 4px in this build — the kit default pill is reserved for chips and role badges.</div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Spacing &amp; page frame</div>
+          <ul style="margin:0;padding-left:18px;font-size:12.5px;line-height:20px;color:var(--pa-ink-2)">
+            <li>Page gutter 32px; content top 24px.</li>
+            <li>Card padding 26px / 32px; 24px between stacked fields; 24px&nbsp;× 40px between paired columns.</li>
+            <li>24px between cards, 28px between rail groups.</li>
+            <li>Detail layout 3fr / 1fr, 28px gap, collapsing to one column under 1180px.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Motion &amp; iconography</div>
+          <ul style="margin:0;padding-left:18px;font-size:12.5px;line-height:20px;color:var(--pa-ink-2)">
+            <li>150ms cubic-bezier(.4,0,.2,1) for hover, focus, expand.</li>
+            <li>300ms enter / 250ms exit for modals; toasts slide 14px.</li>
+            <li>MDI outlined at 15–24px; ink-2 default, primary when active, white on the sidebar.</li>
+            <li>No springs, no shimmer, no decorative animation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= COMPONENTS ================= -->
+  <div class="stack" data-panel="components" hidden>
+
+    <section class="pa-card">
+      <div class="pa-band">BUTTONS</div>
+      <div style="padding:6px 32px 28px">
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Primary</div><div class="pa-spec-desc">Saves, creates, opens a builder. One per region. Leading icon optional, label always all caps.</div><div class="pa-mono" style="margin-top:6px">.pa-btn.pa-btn--primary</div></div>
+          <div class="spec-example">
+            <button class="pa-btn pa-btn--primary"><span>SAVE</span></button>
+            <button class="pa-btn pa-btn--primary"><i class="mdi mdi-plus"></i><span>CREATE ENDURING ACTIVITY</span></button>
+            <button class="pa-btn pa-btn--primary"><i class="mdi mdi-clock-outline"></i><span>SCHEDULE EVENT INVITE</span></button>
+            <button class="pa-btn pa-btn--primary" disabled><span>DISABLED</span></button>
+          </div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Secondary &amp; grey</div><div class="pa-spec-desc">Blue outline for a second real action; grey outline for Cancel and dismissals.</div><div class="pa-mono" style="margin-top:6px">--secondary · --secondary-grey</div></div>
+          <div class="spec-example">
+            <button class="pa-btn pa-btn--secondary"><i class="mdi mdi-pencil-outline"></i><span>EDIT</span></button>
+            <button class="pa-btn pa-btn--secondary"><i class="mdi mdi-link-variant"></i><span>LINK EXISTING ACTIVITY</span></button>
+            <button class="pa-btn pa-btn--secondary-grey"><span>CANCEL</span></button>
+            <button class="pa-btn pa-btn--danger-outline"><i class="mdi mdi-delete-outline"></i><span>REMOVE</span></button>
+          </div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Tertiary &amp; small</div><div class="pa-spec-desc">Inside cards and tables where an outline would add noise. 24px height for row-level actions.</div></div>
+          <div class="spec-example">
+            <button class="pa-btn pa-btn--tertiary"><i class="mdi mdi-plus"></i><span>ADD ANOTHER</span></button>
+            <button class="pa-btn pa-btn--tertiary-grey"><span>RESET</span></button>
+            <button class="pa-btn pa-btn--primary pa-btn--sm"><span>APPLY</span></button>
+            <button class="pa-btn pa-btn--secondary pa-btn--sm"><span>PREVIEW</span></button>
+          </div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Rail link button</div><div class="pa-spec-desc">Aqua, full width, left-aligned, open-in-new icon. Only for destinations outside the current page.</div><div class="pa-mono" style="margin-top:6px">.pa-rail-btn</div></div>
+          <div style="display:flex;flex-direction:column;gap:10px;max-width:340px">
+            <button class="pa-rail-btn"><i class="mdi mdi-open-in-new"></i><span>Review Surveys</span></button>
+            <button class="pa-rail-btn"><i class="mdi mdi-open-in-new"></i><span>View Registrations</span></button>
+          </div>
+        </div>
+        <div class="spec-row">
+          <div><div class="pa-spec-name">Icon buttons</div><div class="pa-spec-desc">36px circular hit target, 6% ink film on hover. Always titled — no visible label.</div><div class="pa-mono" style="margin-top:6px">.pa-ib</div></div>
+          <div class="spec-example" style="gap:6px">
+            <button class="pa-ib" title="Edit"><i class="mdi mdi-pencil-outline"></i></button>
+            <button class="pa-ib" title="Duplicate"><i class="mdi mdi-content-copy"></i></button>
+            <button class="pa-ib" title="Refresh"><i class="mdi mdi-autorenew"></i></button>
+            <button class="pa-ib" title="Settings"><i class="mdi mdi-cog-outline" style="font-size:20px"></i></button>
+            <button class="pa-ib pa-ib--danger" title="Delete"><i class="mdi mdi-delete-outline"></i></button>
+            <button class="pa-ib pa-ib--ink pa-ib--close" title="Close"><i class="mdi mdi-close"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">FORM CONTROLS</div>
+      <div class="pa-card__body" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px 40px;align-items:start">
+        <div class="pa-field"><label class="pa-field__label">Short Title</label><input class="pa-field__input" value="RCC 2026 ATS Sympo w/ Livestream"></div>
+        <div class="pa-field"><label class="pa-field__label">Abbreviated Title</label><input class="pa-field__input" placeholder=" "><div class="pa-field__hint">Empty: the label sits on the baseline. On focus or once a value exists it scales to 11.5px and rises above the line.</div></div>
+        <div class="pa-field" style="grid-column:1/-1"><label class="pa-field__label">Activity Summary</label><textarea class="pa-field__input" rows="2" style="resize:vertical">1.25-hour Multi-Accredited Live On-Site Satellite Symposium With Livestream at ATS 2026.</textarea></div>
+        <div class="pa-field pa-field--filled"><label class="pa-field__label">Supporters</label><div class="pa-field__face pa-field__face--chips"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 4px 0 10px;border-radius:12px;background:var(--pa-primary);color:#fff;font-family:var(--pa-font-display);font-size:11.5px;font-weight:500">GSK<i class="mdi mdi-close-circle" style="font-size:14px;cursor:pointer;opacity:.85;color:#fff"></i></span><div style="flex:1"></div><i class="mdi mdi-menu-down"></i></div><div class="pa-field__hint">Choose one or more grant supporters.</div></div>
+        <div class="pa-field pa-field--filled"><label class="pa-field__label">Asana Activity Type</label><div class="pa-field__face"><span class="pa-field__value">Webinar</span><i class="mdi mdi-menu-down"></i></div></div>
+        <div class="pa-field pa-field--filled"><label class="pa-field__label">Release Date</label><div class="pa-field__face"><span class="pa-field__value">07/31/2026</span><i class="mdi mdi-calendar-blank-outline"></i></div></div>
+        <div class="pa-field pa-field--filled"><label class="pa-field__label">Start Time</label><div class="pa-field__face"><span class="pa-field__value pa-field__value--empty">--:-- --</span><i class="mdi mdi-clock-outline"></i></div></div>
+        <div class="pa-field pa-field--error"><label class="pa-field__label">Join Meeting URL</label><input class="pa-field__input" value="ehgroup.zoom.us"><div class="pa-field__hint">Enter a full URL including https://.</div></div>
+        <div class="pa-field pa-field--disabled"><label class="pa-field__label">Room URL</label><div class="pa-field__input" style="border-bottom:1px dashed var(--pa-ink-7);color:var(--pa-ink-7)">Updated after saving</div><div class="pa-field__hint">Read-only fields keep the underline but switch it to dashed.</div></div>
+        <div style="grid-column:1/-1;height:1px;background:var(--pa-line)"></div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:14px">Toggle, checkbox, radio</div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <label style="display:inline-flex;align-items:center;gap:12px;padding:6px 0;cursor:pointer;user-select:none;align-self:flex-start">
+              <input type="checkbox" id="toggle" checked hidden>
+              <span id="toggle-track" style="position:relative;width:36px;height:14px;border-radius:7px;flex-shrink:0;display:inline-block;transition:background 200ms cubic-bezier(.4,0,.2,1)"><span id="toggle-thumb" style="position:absolute;top:-3px;left:-1px;width:20px;height:20px;border-radius:50%;box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);transition:transform 200ms cubic-bezier(.4,0,.2,1),background 200ms cubic-bezier(.4,0,.2,1)"></span></span>
+              <span style="font-size:14px;line-height:20px">Multi-registration enabled</span>
+            </label>
+            <div style="display:flex;align-items:center;gap:10px"><i class="mdi mdi-checkbox-marked" style="font-size:20px;color:var(--pa-primary)"></i><span style="font-size:13.5px">Select related activities by default</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><i class="mdi mdi-checkbox-blank-outline" style="font-size:20px;color:var(--pa-ink-3)"></i><span style="font-size:13.5px">Show archived</span></div>
+            <div style="display:flex;align-items:center;gap:18px"><span style="display:inline-flex;align-items:center;gap:8px"><i class="mdi mdi-radiobox-marked" style="font-size:20px;color:var(--pa-primary)"></i><span style="font-size:13.5px">Yes</span></span><span style="display:inline-flex;align-items:center;gap:8px"><i class="mdi mdi-radiobox-blank" style="font-size:20px;color:var(--pa-ink-3)"></i><span style="font-size:13.5px">No</span></span></div>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:14px">Search &amp; filter inputs</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="search" style="width:100%"><input placeholder="Search for [Project]"><i class="mdi mdi-magnify" style="color:var(--pa-ink-6);font-size:18px"></i></div>
+            <div class="search" style="width:100%"><input placeholder="All categories"><i class="mdi mdi-magnify" style="color:var(--pa-ink-6);font-size:18px"></i></div>
+            <div class="pa-caption">Boxed 4px inputs are for search and table filters only. Everything that edits a record uses the underlined field.</div>
+            <div class="pa-callout js-rules" style="padding:14px 16px">
+              <div class="pa-callout__title">Labels</div>
+              <ul>
+                <li>Every record field carries a floating label — never a placeholder standing in for the label.</li>
+                <li>Placeholder text is reserved for boxed search and filter inputs, where the magnifier makes the intent obvious.</li>
+                <li>Read-only, select, date, and chip fields keep the label permanently raised, since they always read as filled.</li>
+                <li>Hint and error text sits below the underline and does not move.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="grid-column:1/-1">
+          <div class="pa-spec-name" style="margin-bottom:12px">Assisted-entry row</div>
+          <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap"><button class="pa-btn pa-btn--secondary"><i class="mdi mdi-auto-fix"></i><span>NEW SUGGESTION</span></button><div class="pa-field pa-field--hasplaceholder" style="max-width:420px;padding-top:0"><input class="pa-field__input" placeholder="Suggest a title with ChatGPT."></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">CHIPS, BADGES &amp; AVATARS</div>
+      <div class="pa-card__body" style="display:flex;flex-direction:column;gap:22px">
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:10px">Role chips — solid blue pill, all caps, Roboto Flex 700</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span class="pa-badge">Course Director</span>
+            <span class="pa-badge">Speaker</span>
+            <span class="pa-badge">Moderator</span>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:10px">Filter chips — 12% tint when selected, grey when not</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span class="pa-chip pa-chip--selected">Accredited</span>
+            <span class="pa-chip">Enduring</span>
+            <span class="pa-chip">Live</span>
+            <span class="pa-chip" disabled>Archived</span>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:10px">Count &amp; status pills</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+            <span class="pa-badge pa-badge--count">2 rooms</span>
+            <span class="doc-pill doc-pill--ok"><i class="mdi mdi-check"></i>W9/W8BEN</span>
+            <span class="doc-pill doc-pill--warn"><i class="mdi mdi-clock-outline"></i>Disclosures</span>
+            <span class="doc-pill doc-pill--err"><i class="mdi mdi-close"></i>Master Contract</span>
+            <span class="doc-pill">Statement of Work</span>
+            <span class="pa-badge pa-badge--success">Complete</span>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:10px">Avatars — initials on primary-050, 34px in lists, 78px on faculty cards</div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span class="pa-avatar">SA</span>
+            <span class="pa-avatar">DV</span>
+            <span class="pa-avatar pa-avatar--more">+3</span>
+            <span class="avatar" style="margin-left:8px">DB</span>
+            <span class="pa-caption">Green avatar is the signed-in user in the header only.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">TABLES &amp; LISTS</div>
+      <div class="pa-card__body" style="display:flex;flex-direction:column;gap:26px">
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:4px">Grid table — bounded set inside a record</div>
+          <div class="pa-caption" style="margin-bottom:12px">Bordered cells, #F0F0F0 header, 12px 500 title-case column names, row actions right-aligned as icon buttons. Never paginated.</div>
+          <div class="pa-table">
+            <div class="pa-table__head">
+              <div>File</div>
+              <div>Category</div>
+              <div>Status</div>
+              <div>Actions</div>
+            </div>
+            <div id="grid-rows"></div>
+          </div>
+        </div>
+        <div style="height:1px;background:var(--pa-line)"></div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:4px">Paginated list table — long index screens</div>
+          <div class="pa-caption" style="margin-bottom:12px">For screens that list every record of a type (Newsletters, Activities). No cell borders: a heavy hairline above and below the header row, #EEEEEE between rows, 14px regular column names. Sortable columns carry an arrow that turns blue when active. Controls — range label, rows-per-page select, page numbers — repeat above and below the table so long lists never need a scroll back up.</div>
+          <div class="pa-tablebar pa-tablebar--top">
+            <span class="pa-tablebar__label js-range"></span>
+            <div style="display:flex;align-items:center;gap:10px">
+              <span class="pa-tablebar__label">Rows per page:</span>
+              <select class="pa-perpage js-perpage">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+              </select>
+            </div>
+            <div class="pa-tablebar__spacer"></div>
+            <div class="pa-pager js-pager"></div>
+          </div>
+          <div style="overflow-x:auto">
+            <table class="pa-ltable">
+              <thead>
+                <tr>
+                  <th class="col-published">Published</th>
+                  <th class="col-id">ID</th>
+                  <th class="col-title">Title</th>
+                  <th class="col-feed">Feed Type</th>
+                  <th class="col-desc">Description</th>
+                  <th class="col-modified is-sortable" id="sort-modified">Last Modified <i class="mdi mdi-arrow-down"></i></th>
+                  <th class="col-actions">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="list-rows"></tbody>
+            </table>
+          </div>
+          <div class="pa-tablebar pa-tablebar--bottom">
+            <span class="pa-tablebar__label js-range"></span>
+            <div style="display:flex;align-items:center;gap:10px">
+              <span class="pa-tablebar__label">Rows per page:</span>
+              <select class="pa-perpage js-perpage">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+              </select>
+            </div>
+            <div class="pa-tablebar__spacer"></div>
+            <div class="pa-pager js-pager"></div>
+          </div>
+          <div class="pa-callout js-rules" style="margin-top:20px">
+            <div class="pa-callout__title">Which table to use</div>
+            <ul>
+              <li>Grid table for a bounded set inside a record — attachments, tapings, faculty on one activity. Never paginated; if it can exceed roughly 20 rows it is the wrong table.</li>
+              <li>Paginated list table for index screens where the row count is open-ended. Always pair it with search and filter chips above the table.</li>
+              <li>Rows per page: 5 / 10 / 25 on nested lists, 10 / 20 / 50 / 100 on full-page indexes. Changing it, sorting, searching, or filtering all reset to page 1.</li>
+              <li>Page numbers collapse with an ellipsis past seven pages; first and last page stay reachable.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="spec-grid">
+          <div>
+            <div class="pa-spec-name" style="margin-bottom:4px">Rail table card</div>
+            <div class="pa-caption" style="margin-bottom:12px">Grey band title, 13px bold header row, hairline rows, actions in the card footer.</div>
+            <div class="pa-card">
+              <div class="pa-band" style="padding:12px 16px;font-size:16px">ENDURING ACTIVITIES</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 40px;gap:16px;padding:12px 16px;border-bottom:1px solid var(--pa-line);font-size:13px;font-weight:700"><div>Activity Code</div><div>Release Date</div><div></div></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 40px;gap:16px;padding:12px 16px;border-bottom:1px solid var(--pa-line);align-items:center;font-size:13px"><a href="#">23WB255</a><div>8/15/2026</div><div style="display:flex;justify-content:flex-end"><i class="mdi mdi-link-off" style="font-size:18px;color:var(--pa-ink-3);cursor:pointer"></i></div></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 40px;gap:16px;padding:12px 16px;border-bottom:1px solid var(--pa-line);align-items:center;font-size:13px"><a href="#">23WB256</a><div>8/15/2026</div><div style="display:flex;justify-content:flex-end"><i class="mdi mdi-link-off" style="font-size:18px;color:var(--pa-ink-3);cursor:pointer"></i></div></div>
+              <div style="padding:16px;display:flex;flex-wrap:wrap;gap:12px"><button class="pa-btn pa-btn--primary"><i class="mdi mdi-plus"></i><span>CREATE ENDURING ACTIVITY</span></button></div>
+            </div>
+          </div>
+          <div>
+            <div class="pa-spec-name" style="margin-bottom:4px">Expandable list row</div>
+            <div class="pa-caption" style="margin-bottom:12px">Used in modals: avatars, title, meta line with icons, type badge, chevron. Elevation appears on hover only.</div>
+            <div class="pa-listrow">
+              <div class="pa-listrow__inner">
+                <span class="pa-avatar">SA</span>
+                <div style="flex:1;min-width:0">
+                  <div class="pa-listrow__title">Faculty taping — segment 2</div>
+                  <div class="pa-listrow__meta"><span><i class="mdi mdi-calendar-blank-outline"></i>Mar 8, 2026</span><span><i class="mdi mdi-clock-outline"></i>6:36 PM · 45 min</span></div>
+                </div>
+                <span class="pa-badge pa-badge--tint">Zoom</span>
+                <button class="pa-ib" title="Show assets" style="width:34px;height:34px"><i class="mdi mdi-chevron-down" style="font-size:20px"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">FEEDBACK &amp; EMPTY STATES</div>
+      <div class="pa-card__body spec-grid">
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Toasts — 4px left rule, bottom center, 4s</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="pa-toast pa-toast--success"><i class="mdi mdi-check-circle-outline pa-toast__icon"></i><span>Activity details saved.</span></div>
+            <div class="pa-toast pa-toast--warning"><i class="mdi mdi-alert-outline pa-toast__icon"></i><span>Save before creating a flyer.</span></div>
+            <div class="pa-toast pa-toast--error"><i class="mdi mdi-close-circle-outline pa-toast__icon"></i><span>Join URL is not valid.</span></div>
+            <div><button class="pa-btn pa-btn--secondary" id="btn-toast"><span>SHOW LIVE TOAST</span></button></div>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Dropzone — the only dashed border in the product</div>
+          <div class="pa-dropzone">
+            <div>Drag &amp; drop files here, or <a href="#">browse</a></div>
+            <div class="pa-dropzone__hint">PDF, DOCX, PPTX, PNG, MP4 — up to 500MB each</div>
+          </div>
+          <div class="pa-fileitem" style="margin-top:12px">
+            <i class="mdi mdi-file-powerpoint-outline"></i>
+            <div style="flex:1;min-width:0"><div style="font-size:13px">23WC255_HIV_Equity_Office_Hours.pptx</div><div class="pa-caption" style="font-size:11.5px;margin-top:2px">4.6 MB</div></div>
+            <button class="pa-ib pa-ib--sm pa-ib--ink" title="Remove"><i class="mdi mdi-close" style="font-size:20px"></i></button>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Empty / not-migrated state</div>
+          <div class="pa-empty">
+            <i class="mdi mdi-hammer-wrench"></i>
+            <div class="pa-empty__title">Marketing — coming soon</div>
+            <div class="pa-empty__body">This section has not been migrated to Admin 3 yet.</div>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Inline sub-panel — primary-050, opens under its trigger</div>
+          <div style="border:1px solid var(--pa-line);border-radius:4px;overflow:hidden">
+            <div style="padding:14px 16px;display:flex;gap:12px"><button class="pa-btn pa-btn--secondary"><i class="mdi mdi-link-variant"></i><span>LINK EXISTING ACTIVITY</span></button></div>
+            <div class="pa-subpanel">
+              <div style="font-size:13px;color:var(--pa-ink-2);margin-bottom:10px">Link an existing enduring activity by code.</div>
+              <div style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap">
+                <div class="pa-field" style="flex:1;min-width:200px"><label class="pa-field__label">Activity Code</label><input class="pa-field__input" placeholder=" "></div>
+                <button class="pa-btn pa-btn--primary"><i class="mdi mdi-plus"></i><span>ADD</span></button>
+                <button class="pa-btn pa-btn--secondary"><span>CANCEL</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= PATTERNS ================= -->
+  <div class="stack" data-panel="patterns" hidden>
+
+    <section class="pa-card">
+      <div class="pa-band">APP CHROME</div>
+      <div class="pa-card__body">
+        <div style="border:1px solid var(--pa-divider);border-radius:4px;overflow:hidden;display:flex;background:#fff">
+          <nav class="sb">
+            <div class="sb__head"><div style="font-weight:500;font-size:17px;letter-spacing:1px;color:#fff">PRIME <span style="color:var(--pa-aqua-500)">ADMIN</span></div><i class="mdi mdi-chevron-left sb__collapse"></i></div>
+            <div class="sb__section">
+              <div class="sb__item sb__item--active"><i class="mdi mdi-account-box-outline"></i><span>Program Management</span><i class="mdi sb__item__chev mdi-chevron-up"></i></div>
+              <div class="sb__sub"><div class="sb__sub-item">Projects</div><div class="sb__sub-item sb__sub-item--active">Activities</div></div>
+            </div>
+            <div class="sb__section"><div class="sb__item"><i class="mdi mdi-chart-line"></i><span>Marketing</span><i class="mdi sb__item__chev mdi-chevron-down"></i></div></div>
+            <div class="sb__section"><div class="sb__item"><i class="mdi mdi-poll"></i><span>Outcomes</span><i class="mdi sb__item__chev mdi-chevron-down"></i></div></div>
+            <div class="sb__section"><div class="sb__item"><i class="mdi mdi-chart-box-outline"></i><span>Reporting</span><i class="mdi sb__item__chev mdi-chevron-down"></i></div></div>
+          </nav>
+          <div style="flex:1;min-width:0">
+            <header class="topbar">
+              <div class="search" style="flex:1;max-width:420px"><input placeholder="Search for [Project]"><i class="mdi mdi-magnify" style="color:var(--pa-ink-6);font-size:18px"></i></div>
+              <button class="pa-btn pa-btn--primary"><i class="mdi mdi-plus"></i><span>CREATE</span></button>
+              <div style="flex:1"></div>
+              <button class="topbar__btn" title="Notifications"><i class="mdi mdi-bell-outline" style="font-size:22px"></i></button>
+              <span class="avatar">DB</span>
+            </header>
+            <div style="padding:16px 24px 12px">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
+                <div>
+                  <h1 class="pa-page-title" style="font-size:24px">ACTIVITIES</h1>
+                  <div class="pa-meta" style="gap:6px 24px;margin-top:10px">
+                    <span><span class="pa-meta-key">Project</span> <span class="pa-meta-val">23258</span></span>
+                    <span><span class="pa-meta-key">Activity Type</span> <span class="pa-meta-val">Webinar</span></span>
+                    <span><span class="pa-meta-key">Status</span> <span class="pa-meta-val" style="color:var(--pa-warning)">Submitted to PARS</span></span>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+                  <button class="pa-btn pa-btn--secondary-grey"><span>CANCEL</span></button>
+                  <button class="pa-btn pa-btn--primary"><span>SAVE</span></button>
+                  <button class="topbar__btn" title="Activity features"><i class="mdi mdi-cog-outline" style="font-size:20px"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="pa-tabs" style="height:44px">
+              <button class="pa-tabs__btn">OVERVIEW</button>
+              <button class="pa-tabs__btn pa-tabs__btn--active">DETAILS</button>
+              <button class="pa-tabs__btn">CONTENT</button>
+              <button class="pa-tabs__btn">FACULTY</button>
+              <button class="pa-tabs__btn">FILES</button>
+            </div>
+            <div style="padding:18px 24px 26px" class="pa-caption">23258 &gt; 23WC255<h2 class="pa-screen-title" style="font-size:20px;margin:10px 0 0">ACTIVITY DETAILS (23WC255)</h2></div>
+          </div>
+        </div>
+        <div class="js-rules" style="margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px 40px">
+          <div><div class="pa-eyebrow" style="margin-bottom:8px">Header</div><ul style="margin:0;padding-left:18px;font-size:12.5px;line-height:19px;color:var(--pa-ink-2)"><li>56px, white, hairline bottom. Search + CREATE left, notifications + avatar right.</li><li>Record-level actions live in the page header, not the top bar.</li></ul></div>
+          <div><div class="pa-eyebrow" style="margin-bottom:8px">Page header</div><ul style="margin:0;padding-left:18px;font-size:12.5px;line-height:19px;color:var(--pa-ink-2)"><li>Plain white — no tinted band.</li><li>Title, then the meta strip, then actions right: destructive/secondary first, primary last, gear last of all.</li><li>Read mode shows EDIT; edit mode swaps it for CANCEL + SAVE.</li></ul></div>
+          <div><div class="pa-eyebrow" style="margin-bottom:8px">Tab bar</div><ul style="margin:0;padding-left:18px;font-size:12.5px;line-height:19px;color:var(--pa-ink-2)"><li>Full-width primary blue, equal-width tabs, 13px all caps +0.08em.</li><li>Active = primary-700 fill, no underline. Hover = 6% white film.</li><li>Breadcrumb and screen heading sit below the bar, never above.</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">DETAIL PAGE LAYOUT</div>
+      <div class="pa-card__body">
+        <div class="detail-layout">
+          <div style="min-width:0;display:flex;flex-direction:column;gap:24px">
+            <div class="pa-card pa-card--form">
+              <div style="padding:26px 32px 28px;display:flex;flex-direction:column;gap:24px">
+                <div class="pa-field"><label class="pa-field__label">Activity Title</label><input class="pa-field__input" value="Updates in Refractory Chronic Cough"></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px 40px"><div class="pa-field"><label class="pa-field__label">Short Title</label><input class="pa-field__input" value="RCC 2026 ATS Sympo"></div><div class="pa-field"><label class="pa-field__label">Abbreviated Title</label><input class="pa-field__input" placeholder=" "></div></div>
+              </div>
+              <div class="pa-band">LEADS</div>
+              <div style="padding:24px 32px 28px;display:grid;grid-template-columns:1fr 1fr;gap:24px 40px">
+                <div class="pa-field"><label class="pa-field__label">Clinical Lead</label><div class="pa-field__face pa-field__face--chips"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 4px 0 10px;border-radius:12px;background:var(--pa-primary);color:#fff;font-family:var(--pa-font-display);font-size:11.5px;font-weight:500">Sara Atcheison<i class="mdi mdi-close-circle" style="font-size:14px;color:#fff"></i></span><div style="flex:1"></div><i class="mdi mdi-menu-down"></i></div></div>
+                <div class="pa-field"><label class="pa-field__label">Creative Lead</label><div class="pa-field__face"><span class="pa-field__value pa-field__value--empty">Select a lead</span><i class="mdi mdi-menu-down"></i></div></div>
+              </div>
+              <div class="pa-band">IMPORTANT DATES</div>
+              <div style="padding:24px 32px 30px;display:flex;flex-direction:column;gap:24px">
+                <div class="pa-field pa-field--filled"><label class="pa-field__label">Release Date</label><div class="pa-field__face"><span class="pa-field__value">07/31/2026</span><i class="mdi mdi-calendar-blank-outline"></i></div><div class="pa-field__hint">Leave blank to use "Release date".</div></div>
+              </div>
+            </div>
+          </div>
+          <div style="min-width:0;display:flex;flex-direction:column">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div style="display:flex;flex-direction:column;gap:8px"><div class="pa-caption" style="text-align:center">Required Surveys</div><button class="pa-btn pa-btn--primary" style="width:100%;padding:0 8px">VIEW SETTINGS</button></div>
+              <div style="display:flex;flex-direction:column;gap:8px"><div class="pa-caption" style="text-align:center">Taping(s)</div><button class="pa-btn pa-btn--primary" style="width:100%;padding:0 8px">CREATE TAPING(S)</button></div>
+            </div>
+            <h3 class="pa-rail-title" style="margin:28px 0 14px">USEFUL LINKS</h3>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <button class="pa-rail-btn"><i class="mdi mdi-open-in-new"></i><span>Review Surveys</span></button>
+              <button class="pa-rail-btn"><i class="mdi mdi-open-in-new"></i><span>Create a Flyer</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="pa-callout js-rules" style="margin-top:24px">
+          <div class="pa-callout__title">Rules</div>
+          <ul>
+            <li>Left column is the record being edited; the right rail is only navigation, related records, and external links. Nothing in the rail is required to save the page.</li>
+            <li>One card per subject. Related groups become #F0F0F0 bands inside that card rather than new cards.</li>
+            <li>Fields stack full width; pair them into two columns only when both are short. Helper text belongs to the field, never to the group.</li>
+            <li>Rail starts 37px lower than the form column so its first button aligns with the first card.</li>
+            <li>Feature-flagged sections (Rooms, Follow-ups, ConnectED) render as whole cards, shown or hidden as a unit.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">MODALS, DRAWERS &amp; PANELS</div>
+      <div class="pa-card__body">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px">
+          <button class="pa-btn pa-btn--primary" id="btn-modal"><span>OPEN WORK MODAL</span></button>
+          <button class="pa-btn pa-btn--secondary" id="btn-confirm"><span>OPEN CONFIRM DIALOG</span></button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:30px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:26px 40px;align-items:start">
+            <div>
+              <div class="pa-spec-name" style="margin-bottom:4px">Work modal anatomy</div>
+              <div class="pa-caption" style="margin-bottom:12px">940px, 8px radius, elev-modal. Header title in Inter 20 all caps with the record code beneath; divider inset 32px; footer actions right, Cancel before Save.</div>
+              <div style="border-radius:8px;box-shadow:var(--pa-elev-modal);overflow:hidden;background:#fff">
+                <div class="pa-modal__head" style="padding:20px 24px 12px">
+                  <div><div class="pa-modal-title" style="font-size:19px">Create Taping</div><div class="pa-modal__sub"><span class="pa-modal__sub-key">Activity</span><span class="pa-modal__sub-val">23WC255</span></div></div>
+                  <button class="pa-ib pa-ib--ink pa-ib--close" title="Close" style="width:34px;height:34px"><i class="mdi mdi-close"></i></button>
+                </div>
+                <div class="pa-modal__rule" style="margin:0 24px"></div>
+                <div class="pa-modal__body" style="padding:20px 24px 22px;gap:20px"><div class="pa-field"><label class="pa-field__label">Taping Title</label><input class="pa-field__input" placeholder=" "></div><div class="pa-field pa-field--filled"><label class="pa-field__label">Platform</label><div class="pa-field__face"><span class="pa-field__value">PRIME Zoom</span><i class="mdi mdi-menu-down"></i></div></div></div>
+                <div class="pa-modal__foot" style="padding:14px 24px"><button class="pa-btn pa-btn--secondary-grey"><span>CANCEL</span></button><button class="pa-btn pa-btn--primary"><span>SAVE TAPING</span></button></div>
+              </div>
+            </div>
+            <div>
+              <div class="pa-spec-name" style="margin-bottom:4px">Side panel</div>
+              <div class="pa-caption" style="margin-bottom:12px">Right-anchored, 460px, full height, elev-modal, 250ms slide. For history and add-record flows that keep the page visible behind them.</div>
+              <div style="border:1px solid var(--pa-line);border-radius:4px;overflow:hidden;display:flex;height:260px;background:#fafafa">
+                <div style="flex:1"></div>
+                <div style="width:230px;background:#fff;box-shadow:var(--pa-elev-modal);display:flex;flex-direction:column">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--pa-divider)"><div class="pa-modal-title" style="font-size:15px">Change History</div><i class="mdi mdi-close" style="font-size:20px;cursor:pointer"></i></div>
+                  <div style="padding:14px 16px;display:flex;flex-direction:column;gap:14px">
+                    <div><div class="pa-caption" style="font-size:11.5px">Mar 8, 2023 at 6:36 PM</div><div style="font-size:12.5px;line-height:18px;margin-top:3px">Release date changed to 07/31/2026.</div></div>
+                    <div><div class="pa-caption" style="font-size:11.5px">Mar 7, 2023 at 11:02 AM</div><div style="font-size:12.5px;line-height:18px;margin-top:3px">Supporter GSK added.</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="height:1px;background:var(--pa-line)"></div>
+          <div>
+            <div class="pa-spec-name" style="margin-bottom:4px">Picker drawer — add or remove records</div>
+            <div class="pa-caption" style="margin-bottom:14px;max-width:820px">A drawer, not a modal: anchored to the right edge, full viewport height, 1180px wide (max 96vw), elev-modal, 260ms slide in from the right. Used when the choice needs a wide table — faculty, activities, resource centers. Header carries the record it edits; two boxed search fields filter name and tags independently; each row offers one outline button, blue ADD or red REMOVE, so state is legible without a checkbox column. Header row sits on #F0F0F0 with hairline rows beneath. The footer holds page controls left and a single primary DONE right — DONE only dismisses; every add and remove has already been applied.</div>
+            <div class="pa-drawer-frame">
+              <div class="pa-drawer">
+                <div class="pa-drawer__head">
+                  <div>
+                    <div class="pa-modal-title">Add or Remove Faculty</div>
+                    <div class="pa-drawer__sub"><span class="pa-modal__sub-key">Activity</span><span class="pa-modal__sub-val">23WC255</span><span style="font-size:13px;color:var(--pa-ink-4)">·</span><span style="font-size:13px;color:var(--pa-ink-4)">4 faculty on activity</span></div>
+                  </div>
+                  <button class="pa-ib pa-ib--ink" title="Close" style="width:34px;height:34px"><i class="mdi mdi-close" style="font-size:24px"></i></button>
+                </div>
+                <div class="pa-drawer__rule"></div>
+                <div class="pa-drawer__search">
+                  <div class="search"><input placeholder="Search for faculty"><i class="mdi mdi-magnify" style="color:var(--pa-ink-4);font-size:20px"></i></div>
+                  <div class="search"><input placeholder="Search for tags"><i class="mdi mdi-magnify" style="color:var(--pa-ink-4);font-size:20px"></i></div>
+                </div>
+                <div class="pa-drawer__table">
+                  <div class="pa-drow pa-drow--head">
+                    <div>Action</div><div>Faculty</div><div>Tags</div><div>Affiliation</div><div>Notes</div>
+                  </div>
+                  <div id="drawer-rows"></div>
+                </div>
+                <div class="pa-drawer__foot">
+                  <div class="pa-pager">
+                    <button class="pa-ib pa-ib--ink" title="Previous page" style="width:34px;height:34px"><i class="mdi mdi-chevron-left" style="font-size:22px"></i></button>
+                    <button class="pa-pager__btn is-current">1</button>
+                    <button class="pa-pager__btn">2</button>
+                    <button class="pa-pager__btn">3</button>
+                    <button class="pa-ib pa-ib--ink" title="Next page" style="width:34px;height:34px"><i class="mdi mdi-chevron-right" style="font-size:22px"></i></button>
+                  </div>
+                  <button class="pa-btn pa-btn--primary"><span>DONE</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pa-card">
+      <div class="pa-band">READ &amp; EDIT MODES</div>
+      <div class="pa-card__body spec-grid">
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Read mode</div>
+          <div style="border:1px solid var(--pa-line);border-radius:4px;padding:18px 20px;display:flex;flex-direction:column;gap:18px">
+            <div class="pa-field pa-field--disabled"><label class="pa-field__label">Short Title</label><div class="pa-field__input" style="border-bottom:1px dashed var(--pa-ink-7);color:var(--pa-ink-4)">RCC 2026 ATS Sympo w/ Livestream</div></div>
+            <div style="display:flex;gap:10px"><button class="pa-btn pa-btn--primary" disabled><span>GENERATE</span></button><button class="pa-btn pa-btn--secondary" disabled><span>ENTER EMAILS</span></button></div>
+            <div class="pa-caption">Same layout, same field order. Values stay in place, underlines go dashed, in-card actions drop to 30% and stop responding.</div>
+          </div>
+        </div>
+        <div>
+          <div class="pa-spec-name" style="margin-bottom:12px">Edit mode</div>
+          <div style="border:1px solid var(--pa-line);border-radius:4px;padding:18px 20px;display:flex;flex-direction:column;gap:18px">
+            <div class="pa-field"><label class="pa-field__label">Short Title</label><input class="pa-field__input" value="RCC 2026 ATS Sympo w/ Livestream"></div>
+            <div style="display:flex;gap:10px"><button class="pa-btn pa-btn--primary"><span>GENERATE</span></button><button class="pa-btn pa-btn--secondary"><i class="mdi mdi-email-arrow-right-outline"></i><span>ENTER EMAILS</span></button></div>
+            <div class="pa-caption">Focus takes a 2px underline. The page header shows CANCEL + SAVE; leaving edit mode never changes scroll position.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  </div>
+
+  <div class="page__foot">1997–2026 PRIME Education, LLC — internal pattern reference</div>
+</div>
+
+<!-- Work modal -->
+<div class="pa-scrim" id="modal" hidden>
+  <div class="pa-modal">
+    <div class="pa-modal__head">
+      <div><div class="pa-modal-title">Update Event Schedule</div><div class="pa-modal__sub"><span class="pa-modal__sub-key">Activity</span><span class="pa-modal__sub-val">23WC255</span></div></div>
+      <button class="pa-ib pa-ib--ink" title="Close" data-close style="width:34px;height:34px"><i class="mdi mdi-close" style="font-size:24px"></i></button>
+    </div>
+    <div class="pa-modal__rule"></div>
+    <div class="pa-modal__body">
+      <div class="pa-field"><label class="pa-field__label">Session Title</label><input class="pa-field__input" value="Opening remarks"></div>
+      <div class="pa-field pa-field--filled"><label class="pa-field__label">Presenter</label><div class="pa-field__face"><span class="pa-field__value">Sara Atcheison</span><i class="mdi mdi-menu-down"></i></div></div>
+      <div class="pa-field pa-field--filled"><label class="pa-field__label">Start Time</label><div class="pa-field__face"><span class="pa-field__value">6:36 PM</span><i class="mdi mdi-clock-outline"></i></div></div>
+      <div class="pa-field"><label class="pa-field__label">Duration</label><input class="pa-field__input" value="10 minutes"><div class="pa-field__hint">Minutes, including Q&amp;A.</div></div>
+    </div>
+    <div class="pa-modal__foot"><button class="pa-btn pa-btn--secondary-grey" data-close><span>CANCEL</span></button><button class="pa-btn pa-btn--primary" id="btn-save-modal"><span>SAVE SCHEDULE</span></button></div>
+  </div>
+</div>
+
+<!-- Confirm dialog -->
+<div class="pa-scrim pa-scrim--center" id="confirm" hidden>
+  <div class="pa-modal pa-modal--confirm">
+    <div style="padding:24px 26px 8px;font-family:var(--pa-font-modal);font-size:18px;font-weight:500">Unlink 23WB255?</div>
+    <div style="padding:0 26px 22px;font-size:13.5px;line-height:20px;color:var(--pa-ink-2)">The enduring activity stays in the system and can be linked again later.</div>
+    <div class="pa-modal__foot" style="padding:14px 26px"><button class="pa-btn pa-btn--secondary-grey" data-close><span>CANCEL</span></button><button class="pa-btn pa-btn--danger" data-close><span>UNLINK</span></button></div>
+  </div>
+</div>
+
+<!-- Live toast -->
+<div class="pa-toast pa-toast--success pa-toast--live" id="toast" hidden><i class="mdi mdi-check-circle-outline pa-toast__icon"></i><span>Activity details saved.</span></div>
+
+<script src="pattern-library.js"></script>
+</body>
+</html>
